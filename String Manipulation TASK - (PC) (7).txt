@@ -1,0 +1,15 @@
+ /Task - 7
+
+        DECLARE s, mystr2, mystr3, mystr4 : String
+
+        Input"Enter the string: ", s
+        s = Upper(s)
+
+        If Len(s) < 2 Then
+            Output "The Entered String Is Short You Got No Answer"
+        Else
+            mystr2 <- Left(s, 2)
+            mystr3 <- Right(s, 2)
+            mystr4 <- mystr2 + mystr3
+            Output "The Final String is: " + mystr4
+        End If

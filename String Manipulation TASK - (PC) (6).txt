@@ -1,0 +1,13 @@
+ /Task - 6
+        
+        Declare donuts : Integer
+
+        Input"Enter a number of donuts: ",donuts
+
+        If donuts > 9 Then
+            donuts = Str(donuts)
+            Output"The Number Of Donuts: " + "Many"
+        Else
+            donuts = Str(donuts)
+            Output"The Number Of Donuts: " + donuts
+        End If

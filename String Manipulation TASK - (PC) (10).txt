@@ -1,0 +1,22 @@
+ /Task - 10
+
+        Declare mystr1, mystr2, mystr3 : String
+
+        mystr1 <- ""
+        mystr2 <- ""
+
+        Input"Enter Your word, ending with either 'ing' or can be fitted with 'ing',: ", mystr1
+        mystr1 <- Upper(mystr1)
+
+        If Len(mystr1) < 3 Then
+            Output"Your Word Cannot Be Edited"
+        Else
+            mystr2 <- Right(mystr1, 3)
+            If mystr2 = "ING" Then
+                mystr3 <- mystr1 + "LY"
+                Output"The Final Word Is: " + mystr3
+            Else
+                mystr3 <- mystr1 + "ING"
+                Output"The Final Word Is: " + mystr3
+            End If
+        End If

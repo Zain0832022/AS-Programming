@@ -1,0 +1,41 @@
+/Task - 5        
+        
+        DECLARE myStr1, myStr2 : STRING
+        DECLARE C, N, aCount, eCount, iCount, oCount, uCount, VowelCount : INTEGER
+        DECLARE myChar1 : Char
+
+        myStr1 ← ""
+        myStr2 ← "AEIOU"
+        C ← 0
+        myChar1 ← ''
+       
+        INPUT "Please enter STRING: ", myStr1
+
+        For C ← 1 To LEN(myStr1)
+            myChar1 ← MID(myStr1, C, 1)
+            myChar1 ← UPPER(myChar1)
+            N ← LOCATE(myStr2, myChar1) 
+            IF N > 0 
+              THEN
+                IF myChar1 = "A" THEN
+                    aCount ← aCount + 1
+                ELSEIF myChar1 = "E" THEN
+                    eCount ← eCount + 1
+                ELSEIF myChar1 = "I" THEN
+                    iCount ← iCount + 1
+                ELSEIF myChar1 = "O" THEN
+                    oCount ← oCount + 1
+                ELSEIF myChar1 = "U" THEN
+                    uCount ← uCount + 1
+                END IF
+            END IF
+        Next
+
+        VowelCount ← aCount + eCount + iCount + oCount + uCount 
+
+        OUTPUT "Number of 'A' in STRING is: " + aCount
+        OUTPUT "Number of 'E' in STRING is: " + eCount
+        OUTPUT "Number of 'I' in STRING is: " + iCount
+        OUTPUT "Number of 'O' in STRING is: " + oCount
+        OUTPUT "Number of 'U' in STRING is: " + uCount
+        OUTPUT "Number of Vowels in STRING is: " + VowelCount

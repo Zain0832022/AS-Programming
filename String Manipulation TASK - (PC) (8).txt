@@ -1,0 +1,25 @@
+ /Task - 8
+
+        Declare mystr1, mystr2 : String
+        Declare mychar1, mychar2 : Char
+
+        mystr1 <- ""
+        mystr2 <- ""
+        mychar1 <- ""
+        mychar2 <- ""
+
+        Input"Enter the string of your choice: ",mystr1
+
+        mychar1 <- Mid(mystr1, 1)
+        mystr2 <- mychar1
+
+        For count <- 2 To Len(mystr1)
+            mychar2 <- Mid(mystr1, count, 1)
+            If mychar2 = mychar1 Then
+                mystr2 <- mystr2 + "*"
+            Else
+                mystr2 <- mystr2 + mychar2
+            End If
+        Next
+
+        Output"The Finalised String Is: " + mystr2

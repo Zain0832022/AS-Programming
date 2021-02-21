@@ -1,0 +1,32 @@
+/TASK - 3
+
+        Declare mystr1 : String
+        Declare mychar1 : Char
+        Declare alphaCount, digitCount, C, OtherCharacterCount : Integer
+
+        mystr1 <- ""
+        mychar1 <- ""
+        alphaCount <- 0
+        digitCount <- 0
+        OtherCharacterCount <- 0
+        C <- 0
+
+        Input"Enter Your String :", mystr1
+
+        For C <- 1 To Len(mystr1)
+            mychar1 <- Mid(mystr1, C, 1)
+            mychar1 <- UCase(mychar1)
+
+            If Asc(mychar1) >= 65 And Asc(mychar1) <= 90 Then
+                alphaCount <- alphaCount + 1
+            ElseIf Asc(mychar1) >= 48 And Asc(mychar1) <= 57 Then
+                digitCount <- digitCount + 1
+            End If
+        Next
+  
+        OtherCharacterCount = len(mystr1) - (alphaCount + DigitCount)
+
+        Output"The total count of characters is: " + Len(mystr1)
+        Output"The Count of alphabets is: " + alphaCount
+        Output"The Count of Digits is: " + digitCount
+        Output"The Count of Other Characters is: " + OtherCharacterCount

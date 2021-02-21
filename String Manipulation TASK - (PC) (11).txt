@@ -1,0 +1,37 @@
+ /Task - 11
+
+        Declare mystr1, mystr2 : String
+        Declare n1, n2 : Integer
+        Declare mychar1, mychar2, mychar3 : Char
+
+        mystr1 <- ""
+        mystr2 <- ""
+        mychar1 <- ""
+        mychar2 <- ""
+        mychar3 <- ""
+        n1 <- 0
+        n2 <- 0
+
+        Input "Enter Your String(which should include 'not' and/or 'bad'(end): ", mystr1
+        mystr1 <- Upper(mystr1)
+
+        n1 <- InStr(mystr1, "NOT")
+        n2 <- InStr(mystr1, "BAD")
+
+        If n1 > 0 Then
+            For count <- 1 To n1 - 1
+                mychar1 <- Mid(mystr1, count, 1)
+                mystr2 <- mystr2 + mychar1
+            Next
+            For count <- n1 + 4 To n2 - 1
+                mychar2 <- Mid(mystr1, count, 1)
+                mystr2 <- mystr2 + mychar2
+            Next
+            For count <- n2 + 3 To Len(mystr1)
+                mychar3 <- Mid(mystr1, count, 1)
+                mystr2 <- mystr2 + mychar3
+            Next
+            Output"The Finalised String Is: " + mystr2 + "GOOD"
+        Else
+            Output "Your String Cannot Be Affected."
+        End If

@@ -1,0 +1,40 @@
+/TASK - 4
+
+        DECLARE X : String
+        DECLARE Highest, charactercount, C1, C2 : Integer
+        DECLARE mychar1, mychar2, mychar3 : Char
+
+        X <- ""
+        Highest <- 0
+        charactercount <- 0
+        mychar1 <- ""
+        mychar2 <- ""
+        mychar3 <- ""
+        C1 <- 0
+        C2 <- 0
+
+        Input"Enter The String: ", X
+        X <- UCase(X)
+
+        For C1 <- 1 To Len(X)
+            charactercount <- 0
+            mychar1 <- Mid(X, C1, 1)
+            If Asc(mychar1) >= 65 And Asc(mychar1) <= 90 Or Asc(mychar1) >= 48 And Asc(mychar1) <= 57 Then
+                For C2 <- 1 To Len(X)
+                    mychar2 <- Mid(X, C2, 1)
+                    If mychar2 = mychar1 Then
+                        charactercount <- charactercount + 1
+                    End If
+                Next
+                If charactercount > Highest Then
+                    Highest <- charactercount
+                    mychar3 <- mychar1
+                End If
+            End If
+        Next
+
+        If Highest <= 1 Then
+            Output"None Of The Characters Are Repeated"
+        Else
+            Output"The Highest Character is: " + mychar3 + ", And Its Number Is: " + Highest)
+        End If
